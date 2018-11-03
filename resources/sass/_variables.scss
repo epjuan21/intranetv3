@@ -1,20 +1,43 @@
+// Fonts - Google Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 
-// Body
-$body-bg: #f8fafc;
+$fontFamilyPrimary: 'Lato', sans-serif;
 
-// Typography
-$font-family-sans-serif: "Nunito", sans-serif;
-$font-size-base: 0.9rem;
-$line-height-base: 1.6;
+// Font Awesome
+@import url('https://use.fontawesome.com/releases/v5.3.1/css/all.css');
 
 // Colors
-$blue: #3490dc;
+$blue: #1864ab;
+$darkblue: darken($blue, 30%);
+
 $indigo: #6574cd;
-$purple: #9561e2;
+$violet: #5f3dc4;
+$grape: #862e9c;
 $pink: #f66D9b;
-$red: #e3342f;
+$red: #c92a2a;
 $orange: #f6993f;
-$yellow: #ffed4a;
-$green: #38c172;
+$yellow: #e67700;
+$green: #2b8a3e;
 $teal: #4dc0b5;
-$cyan: #6cb2eb;
+$cyan: #0b7285;
+
+// Grayscale
+$gray0: #f8f9fa;
+$gray1: #f1f3f5;
+
+$gray7: #495057;
+$gray8: #343a40;
+$gray9: #212529;
+
+// Colores Areas
+
+$colorUrgencias: $red;
+$colorPYP: $blue;
+$colorConsExt: $green;
+$colorOdontologia: $violet;
+$colorHosp: $yellow;
+$colorRX: $grape;
+$colorLab: $cyan;
+$colorRem: $gray9;
+
+

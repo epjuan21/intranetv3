@@ -1,0 +1,22 @@
+// Fonts
+
+
+
+// Typography
+
+.j-h1,
+.j-h2,
+.j-h3,
+.j-h4,
+.j-h5,
+.j-h6
+    {
+    font-family: $fontFamilyPrimary;
+    color: $gray8;
+}
+
+.j-h1{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
