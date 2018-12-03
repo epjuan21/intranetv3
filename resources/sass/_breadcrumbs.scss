@@ -1,0 +1,31 @@
+.j-bread {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0.75rem 1rem;
+    background-color: $gray1;
+    margin-top: 0px;
+}
+  
+ol.j-bread {
+    margin-bottom: 0px;
+}
+
+.j-bread-item a, .j-bread-item a:hover {
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: $gray5;
+}
+  
+.j-bread-item + .j-bread-item {
+    padding-left: 0.5rem;
+}
+  
+.j-bread-item  + .j-bread-item::before {
+    display: inline-block;
+    padding-right: 0.5rem;
+    color: $gray5;
+    content: "/";
+}

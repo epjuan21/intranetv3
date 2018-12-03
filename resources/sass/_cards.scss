@@ -1,182 +1,196 @@
-// Contenedor
+// Cards - Card 1
 
-.j-container {
-    height: 400px;
-    width: 90%;
-    border: 1px solid $gray1;
-}
-  
-.j-c-header {
-    height: 90px;
-    border-bottom: 1px solid $gray1;
-}
-  
-.j-c-header h2 {
-    margin: 0;
-    padding: 0px 20px;
-    line-height: 90px;
-    font-family: 'Lato', sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: $blue;
-}
-  
-.j-c-body {
-    border-top: 1px solid $gray1;
-    padding: 20px;
-}
-
-  // Cards
-
-    // Card 1
-        
-    .c1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        width: auto;
-        background-color: white;
-        overflow: hidden;
-        border-radius: 7px;
-        box-shadow: 1px 1px 1px 0px rgba(241,243,245,1);
-        transition: all .2s linear;
-        margin-bottom: 2rem;
-    }
-        
-    .c1:hover {
-        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.25);
-    }
-        
-    .c1:hover .c1-a{
-        color: $gray9;
-    }
-        
-    .c1 .c1-a {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        text-decoration: none;
-        font-family: 'Lato', sans-serif;
-        font-size: 22px;
-        font-weight: 700;
-        color: $gray7;
-        transition: all .3s ease;
-    }
-        
-    .c1-circle {
-        position: relative;
-        left: -140px;
-        width: 170px;
-        height: 170px;
-        border-radius: 50%;
-
-    }
-
-    .c1-circle-urg {
-        background-color: $colorUrgencias;
-    }
-
-    .c1-circle-pyp {
-        background-color: $colorPYP;
-    }
-
-    .c1-circle-ce {
-        background-color: $colorConsExt;
-    }
-
-    .c1-circle-odo{
-        background-color: $colorOdontologia;
-    }
-
-    .c1-circle-hosp {
-        background-color: $colorHosp;
-    }
-
-    .c1-circle-rx {
-        background-color: $colorRX;
-    }
-
-    .c1-circle-lab{
-        background-color: $colorLab;
-    }
-
-    .c1-circle-rem {
-        background-color: $colorRem;
-    }
-        
-    .c1-a-content {
-        position: relative;
-        left: -90px;
-    }
-
-
-
-.j-card {
+.j-c1 {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between ;
     align-items: center;
-    height: 250px;
-    width: 250px;
-    border: 1px solid $gray1;
-    border-radius: 10px;
-    transition: 0.3s ease;
+    border: 1px solid $gray3;
+    height: 100px;
+    width: 400px;
 }
-  
-.j-card:hover {
-    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.55);
+
+.j-c1-i-c {
+    margin: 0px 15px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $green;
 }
-  
-.j-card-i-w {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $blue;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
-}
-  
-.j-card i {
-    font-size: 35px;
+
+.j-c1-i-c i {
+    font-size: 44px;
     color: white;
 }
-  
-.j-card-t h2{
-    font-family: 'Lato', sans-serif;
-    font-size: 20px;
-    font-weight: 700;
-    color: $gray9;
+
+.j-c1-b-c {
+    flex: 1;
 }
-  
-.j-card-f {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    }
-  
-.j-card-f a {
-    width: auto;
-    padding: 0px 10px;
-    line-height: 40px;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: $blue;
-    font-size: 12px;
+
+.j-c1-b-title {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: $gray5;
+}
+
+.j-c1-b-subtitle {
+    font-size: 1.3rem;
     font-weight: 700;
+    color: $gray5;
+}
+
+.j-c1-l-c {
+    position: relative;
+    margin: 0px 15px;
+}
+
+.j-c1-link i {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 36px;
+    color: $gray4;
+}
+
+.j-c1-link i:last-child {
+    position: absolute;
+    top: 0px;
+    left: -11.1px;
+    color: $gray2;
+    z-index: -1;
+    transform: scale(.1);
+    transition: all .2s;
+}
+
+.j-c1-link a:hover i:last-child {
+    position: absolute;
+    top: 0px;
+    left: -11px;
+    color: $gray2;
+    z-index: -1;
+    transform: scale(1.2);
+}
+
+// Cards - Card 2
+
+.j-c2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid $gray3;
+    height: 100px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+.j-c2-i-c {
+    margin: 0px 15px;
     text-align: center;
-    border: 1px solid $darkblue;
-    border-radius: 3px;
-    transition: 0.2s linear;
 }
-  
-.j-card-f a:hover {
-    background-color: $blue;
-    color: white;
+
+.j-c2-b-c {
+    flex: 1;
+}
+
+.j-c2-b-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #495057;
+}
+
+.j-c2-l-c {
+    position: relative;
+    margin: 0px 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.j-c2-link i {
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 36px;
+    color: #CED4DA;
+}
+
+.j-c2-link i:last-child {
+    position: absolute;
+    top: 10px;
+    left: -1px;
+    color: #FCFCFC;
+    z-index: -1;
+    transform: scale(.1);
+    transition: all .2s;
+}
+
+.j-c2-link a:hover  i:last-child {
+    position: absolute;
+    top: 10px;
+    left: -1px;
+    color: #F8F9FA;
+    z-index: -1;
+    transform: scale(1.2);
+}
+
+// Cards - Card 3
+
+.j-c3 {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    border: 1px solid $gray3;
+    height: 70px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding-left: 15px;
+}
+
+.j-c3-i-c {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+    line-height: 35px;
+}
+
+.j-c3-number {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.j-c3-b-c {
+    flex: 1;
+    padding-left: 15px;
+}
+
+.j-c3-b-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #495057;
+}
+
+.j-c3-l-c {
+    margin: 0px 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.j-c3-link a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background-color: attr(data-color);
     text-decoration: none;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: all .3s;
+}
+
+.j-c3-link a:hover {
+    background-color: #228BE6;
+    text-decoration: none;
+    color: white;
 }
 

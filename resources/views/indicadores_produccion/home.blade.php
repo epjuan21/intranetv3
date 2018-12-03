@@ -2,85 +2,101 @@
 
 @section('title','Indicadores Producción')
 
+@section('breadcrumb')
+    <nav>
+        <ol class="j-bread">
+            <li class="j-bread-item"><a href="{{ url('/') }}">Inicio</a></li>
+            <li class="j-bread-item active">Indicadores Producción</li>
+        </ol>
+    </nav>
+@endsection
 
 @section('content')
 
-<div class="container py-4">
-    <div class="row">
-        <h1 class="j-h1">Indicadores de Producción</h1>
+<div class="container">
+    <div class="j-h1">
+        <div class="j-h1-w">
+            <h1>Indicadores Producción</h1>
+        </div>
     </div>
 </div>
-
 
 <div class="container">
 
     <div class="d-flex justify-content-between flex-wrap">
 
-        <div class="c1">
-            <a class="c1-a" href="{{ route('HomePYP') }}">
-                <div class="c1-circle c1-circle-pyp"></div>
-                <div class="c1-a-content">
-                Promocion y Prevencion
-                </div>
-            </a>
-        </div>
-        <div class="c1">
-            <a class="c1-a" href="">
-                <div class="c1-circle c1-circle-ce"></div>
-                <div class="c1-a-content">
+        {{-- Promoción y Prevención --}}
+        <div class="j-c2">
+    
+            <div class="j-c2-i-c">
+              <i class="fas fa-plus-square fa-2x color-pyp"></i>
+            </div>
+            
+            <div class="j-c2-b-c">
+              <div class="j-c2-b-title">
+                Promoción y Prevención
+              </div>  
+            </div>
+            
+            <div class="j-c2-l-c">
+              <div class="j-c2-link">
+                <a href="{{ route('HomePYP') }}">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <i class="fas fa-circle"></i>
+                </a>
+              </div>
+            </div>
+            
+          </div>
+
+        {{-- Consulta Externa --}}
+        <div class="j-c2">
+    
+            <div class="j-c2-i-c">
+                <i class="fas fa-stethoscope"></i>
+            </div>
+            
+            <div class="j-c2-b-c">
+              <div class="j-c2-b-title">
                 Consulta Externa
-                </div>
-            </a>
+              </div>  
+            </div>
+            
+            <div class="j-c2-l-c">
+              <div class="j-c2-link">
+                <a href="">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <i class="fas fa-circle"></i>
+                </a>
+              </div>
+            </div>
+            
         </div>
 
-        <div class="c1">
-            <a class="c1-a" href="">
-                <div class="c1-circle c1-circle-urg"></div>
-                <div class="c1-a-content">
-                Urgencias
+        {{-- Urgencias --}}
+        <div class="j-c2">
+    
+                <div class="j-c2-i-c">
+                  <i class="fas fa-plus-square fa-2x"></i>
                 </div>
-            </a>
-        </div>
-        <div class="c1">
-            <a class="c1-a" href="">
-                <div class="c1-circle c1-circle-odo"></div>
-                <div class="c1-a-content">
-                Odontología
+                
+                <div class="j-c2-b-c">
+                  <div class="j-c2-b-title">
+                    Urgencias
+                  </div>  
                 </div>
-            </a>
-        </div>
-        <div class="c1">
-            <a class="c1-a" href="">
-                <div class="c1-circle c1-circle-hosp"></div>
-                <div class="c1-a-content">
-                Hospitalización
+                
+                <div class="j-c2-l-c">
+                  <div class="j-c2-link">
+                    <a href="">
+                      <i class="fas fa-ellipsis-v"></i>
+                      <i class="fas fa-circle"></i>
+                    </a>
+                  </div>
                 </div>
-            </a>
-        </div>
-        <div class="c1">
-            <a class="c1-a" href="">
-                <div class="c1-circle c1-circle-rx"></div>
-                <div class="c1-a-content">
-                Rayos X
-                </div>
-            </a>
-        </div>
-        <div class="c1">
-            <a class="c1-a" href="">
-                <div class="c1-circle c1-circle-lab"></div>
-                <div class="c1-a-content">
-                Laboratorio
-                </div>
-            </a>
-        </div>
-        <div class="c1">
-            <a class="c1-a" href="">
-                <div class="c1-circle c1-circle-rem"></div>
-                <div class="c1-a-content">
-                Remisiones
-                </div>
-            </a>
-        </div>
+                
+            </div>
+
 
     </div>
 

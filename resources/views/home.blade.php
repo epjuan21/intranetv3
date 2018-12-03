@@ -2,41 +2,45 @@
 
 @section('title','Inicio')
 
+@section('breadcrumb')
+    <nav>
+        <ol class="j-bread">
+            <li class="j-bread-item active">Inicio</li>
+        </ol>
+    </nav>
+@endsection
+
 @section('content')
 
-    <div class="container py-4 d-flex justify-content-center">
+    <div class="container">
 
-        <div class="j-container">
-
-            <div class="j-c-header">
-                <h2>Indicadores</h2>
+        <div class="j-h1">
+            <div class="j-h1-w">
+                <h1>Indicadores</h1>
             </div>
-
-            <div class="j-c-body d-flex justify-content-between">
-
-                <div class="j-card">
-
-                    <div class="j-card-i">
-                        <div class="j-card-i-w">
-                            <i class="fas fa-chart-bar"></i>
-                        </div>
-                    </div>
-                    <div class="j-card-t">
-                        <h2>Indicadores de Producción</h2>  
-                    </div>
-                    <div class="j-card-f">
-                        <a href="{{ route('IndicadoresProduccion') }}">ver indicadores</a>
-                    </div>
-        
-                </div>
-
-            </div>
-            
         </div>
 
-    </div>
-
-    <div class="container">
+        <div class="j-c1">
+            <div class="j-c1-i-c">
+                <i class="far fa-chart-bar"></i>
+            </div>
+            
+            <div class="j-c1-b-c">
+                <div class="j-c1-body">
+                <div class="j-c1-b-title">Indicadores</div>
+                <div class="j-c1-b-subtitle">Producción </div>
+                </div>
+            </div>
+            
+            <div class="j-c1-l-c">
+                <div class="j-c1-link">
+                <a href="{{ route('IndicadoresProduccion') }}">
+                    <i class="fas fa-ellipsis-v"></i>
+                    <i class="fas fa-circle"></i>
+                </a>
+                </div>
+            </div>    
+        </div>
 
     </div>
 

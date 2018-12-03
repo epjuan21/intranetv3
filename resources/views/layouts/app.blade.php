@@ -16,12 +16,13 @@
     <body>
 
         {{-- Header --}}
-        <header>      
+        <header class="border-bottom">      
             @include('layouts.partials.header')
+            @yield('breadcrumb')
         </header>
         
         {{-- Content --}}
-        <section>
+        <section class="flex-grow-1">
             @yield('content')
         </section>
 
