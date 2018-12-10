@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto:300,400,700);@import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);.color-pyp {
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700|Roboto:300,400,700);@import url(https://use.fontawesome.com/releases/v5.3.1/css/all.css);.tc-pyp {
   color: #339AF0;
 }
 
@@ -8,6 +8,34 @@
 
 .bg-pyp {
   background-color: #339AF0;
+}
+
+.tc-cex {
+  color: #51CF66;
+}
+
+.tc-urg {
+  color: #c92a2a;
+}
+
+.tc-odo {
+  color: #0b7285;
+}
+
+.tc-hos {
+  color: #e67700;
+}
+
+.tc-rx {
+  color: #495057;
+}
+
+.tc-lab {
+  color: #5f3dc4;
+}
+
+.tc-rem {
+  color: #212529;
 }
 
 .j-h1,
@@ -167,7 +195,7 @@
 }
 
 .j-c2-i-c {
-  margin: 0px 15px;
+  margin: 0px 25px;
   text-align: center;
 }
 
@@ -179,7 +207,7 @@
 
 .j-c2-b-title {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #495057;
 }
 
@@ -276,7 +304,7 @@
   display: block;
   width: 100px;
   height: 30px;
-  background-color: attr(data-color);
+  background-color: #339AF0;
   text-decoration: none;
   text-align: center;
   line-height: 30px;

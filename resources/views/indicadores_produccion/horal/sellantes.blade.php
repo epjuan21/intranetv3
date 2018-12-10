@@ -26,8 +26,14 @@
 
     <div class="container">
         <div class="row">
+            <div id="chart1" style="width:100%; height:400px;"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
             <div class="col-6">
-                <div id="container" style="width:100%; height:400px;"></div>
+                <div id="chart2" style="width:100%; height:400px;"></div>
             </div>
         </div>
     </div>
@@ -38,7 +44,87 @@
 
 <script>
 
-    var url = '{{url("IndicadoresProduccion/HOral/SellantesData")}}';
+var url = '{{url("IndicadoresProduccion/HOral/SellantesData")}}';
+const meses = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
+
+//===============================================================//
+//
+//  Chart 1
+//
+//===============================================================//
+
+let dataArray1 = [];
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            let datos = data.datos;
+            datos.map( dat => {
+                dataArray1.push(dat.data);
+            })
+            $('#chart1').highcharts(chart1);
+        })
+    var chart = {
+        type: 'column'
+    };
+    var title = {
+        text: 'Número de sellantes aplicados'
+    };
+    var xAxis = {
+        categories: meses
+    };
+    var plotOptions = {
+        series: {
+            color: '#228BE6',
+            dataLabels: {
+                enabled: true,
+                color: '#495057',
+                borderRadius: 3,
+                backgroundColor: '#FCFCFC',
+                borderWidth: 1,
+                borderColor: '#E9ECEF',
+                y: -6
+            }
+        }
+    };
+    var yAxis = {
+        title: {
+            text: null
+        },
+        gridLineWidth: 1,
+        gridLineColor: '#FCFCFC'
+    };
+    var credits = {
+        enabled: false
+    };
+    var legend = {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle',
+        borderWidth: 0
+    };
+    var series = [
+        {
+            name: '2017',
+            data: dataArray1
+        }
+    ];
+
+    var chart1 = {};
+    chart1.chart = chart;
+    chart1.title = title;
+    chart1.xAxis = xAxis;
+    chart1.plotOptions = plotOptions;
+    chart1.yAxis = yAxis;
+    chart1.legend = legend;
+    chart1.series = series;
+    chart1.credits = credits;
+
+//===============================================================//
+//
+//  Chart 2
+//
+//===============================================================//
+
     let dataArray = [];
     fetch(url)
         .then(response => response.json())
@@ -47,30 +133,26 @@
             datos.map( dat => {
                 dataArray.push(dat.data);
             })
-            $('#container').highcharts(json);
+            $('#chart2').highcharts(json);
         })
     var title = {
-        text: 'Monthly Average Temperature'
-    };
-    var subtitle = {
-        text: 'Source: WorldClimate.com'
+        text: 'Número de sellantes aplicados'
     };
     var xAxis = {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: meses
     };
     var yAxis = {
         title: {
-            text: 'Temperature (\xB0C)'
+            text: null
         },
-        plotLines: [{
-            value: 0,
-            width: 1,
-            color: '#808080'
-        }]
-    };   
-    var tooltip = {
-        valueSuffix: '\xB0C'
+    };
+    var credits = {
+        enabled: false
+    };
+    var plotOptions = {
+        series: {
+            color: '#228BE6'
+        }
     };
     var legend = {
         layout: 'vertical',
@@ -91,13 +173,13 @@
 
     var json = {};
     json.title = title;
-    json.subtitle = subtitle;
     json.xAxis = xAxis;
     json.yAxis = yAxis;
-    json.tooltip = tooltip;
+    json.plotOptions = plotOptions;
     json.legend = legend;
     json.series = series;
-    //$('#container').highcharts(json);
+    json.credits = credits;
+
 
  </script>
 

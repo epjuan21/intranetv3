@@ -17,7 +17,7 @@
 <div class="container">
     <div class="j-h1">
         <div class="j-h1-w">
-            <i class="fas fa-plus-square fa-2x color-pyp"></i>
+            <i class="fas fa-plus-square fa-3x tc-pyp"></i>
             <h1>Indicadores Promoción y Prevención</h1>
         </div>
     </div>
@@ -104,7 +104,7 @@
         </div>
 
         <div class="j-c3-l-c">
-            <div class="j-c3-link" data-color="$pyp">
+            <div class="j-c3-link">
                 <a href="{{ route('BarnizFluor') }}">gráficos</a>
             </div>
         </div>

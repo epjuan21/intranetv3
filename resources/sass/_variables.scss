@@ -31,35 +31,105 @@ $gray4: #CED4DA;
 $gray5: #495057;
 $gray6: #212529;
 
-// Colores Areas
+// Colores Areas   // Abrebiaturas Areas
 
-$colorUrgencias: $red;
-$colorPYP: $blue;
-$colorConsExt: $green;
-$colorOdontologia: $violet;
-$colorHosp: $yellow;
-$colorRX: $grape;
-$colorLab: $cyan;
-$colorRem: $gray6;
+$C-URG: $red;      // Urgencias                URG
+$C-PYP: $blue;     // Promoción y Prevencion   PYP
+$C-CEX: $green;    // Consulta Externa         CEX
+$C-ODO: $cyan;     // Odontología              ODO
+$C-HOS: $yellow;   // Hospitalización          HOS
+$C-RX:  $gray5;    // Rayos X                  RX
+$C-LAB: $violet;   // Laboratorio              LAB    
+$C-REM: $gray6;    // Remisiones               REM
+
+// ============================================= //
+
+// Colores Promoción y Prevención //
 
 // Text Color
 
-$color-pyp: $blue;
-$pyp: $blue;
-
-.color-pyp {
-    color: $color-pyp;
+.tc-pyp {
+    color: $C-PYP;
 }
 
 // Border Color
 
 .bc-pyp {
-    border-color: $color-pyp;
+    border-color: $C-PYP;
 }
 
 // Background Color
 
 .bg-pyp {
-    background-color:  $color-pyp;
+    background-color:  $C-PYP;
 }
 
+// ============================================= //
+
+// Colores Consulta Externa //
+
+// Text Color
+
+.tc-cex {
+    color: $C-CEX;
+}
+
+// ============================================= //
+
+// Colores Urgencias //
+
+// Text Color
+
+.tc-urg {
+    color: $C-URG;
+}
+
+// ============================================= //
+
+// Colores Odontología //
+
+// Text Color
+
+.tc-odo {
+    color: $C-ODO;
+}
+
+// ============================================= //
+
+// Colores Hospitalización //
+
+// Text Color
+
+.tc-hos {
+    color: $C-HOS;
+}
+
+// ============================================= //
+
+// Colores Rayos X //
+
+// Text Color
+
+.tc-rx {
+    color: $C-RX;
+}
+
+// ============================================= //
+
+// Colores Laboratorio //
+
+// Text Color
+
+.tc-lab {
+    color: $C-LAB;
+}
+
+// ============================================= //
+
+// Colores Remisiones //
+
+// Text Color
+
+.tc-rem {
+    color: $C-REM;
+}

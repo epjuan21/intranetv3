@@ -37,11 +37,13 @@
 <script>
 const url = '{{url("IndicadoresProduccion/HOral/ControlPlacaData")}}';
 let dataArray = [];
+let categoryArray = [];
 fetch(url)
     .then(response => response.json())
     .then(data =>  {
         data.map(dat => {
             dataArray.push(parseInt(dat.CANTIDAD));
+            categoryArray.push(dat.MES_ATENCION);
         })
         var chart = new Highcharts.Chart(options);
     });
@@ -52,8 +54,7 @@ fetch(url)
         type: 'bar'
     },
     xAxis:  {
-        categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+        categories: categoryArray
     },
     series: [{
         name: '2018',
