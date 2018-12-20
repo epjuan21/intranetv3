@@ -22,7 +22,7 @@
         </header>
         
         {{-- Content --}}
-        <section class="flex-grow-1">
+        <section class="flex-grow-1" id="app">
             @yield('content')
         </section>
 

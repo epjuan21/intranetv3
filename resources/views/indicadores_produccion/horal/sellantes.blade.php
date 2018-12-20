@@ -15,26 +15,27 @@
 
 @section('content')
 
-<div class="container">
-    <div class="j-h1">
-        <div class="j-h1-w">
-            <div class="j-h1-n">01</div>
-            <h1>Higiene Oral - Sellantes</h1>
+    <div class="container">
+        <div class="j-h1">
+            <div class="j-h1-w">
+                <div class="j-h1-n">01</div>
+                <h1>Higiene Oral - Sellantes</h1>
+            </div>
         </div>
     </div>
-</div>
 
     <div class="container">
         <div class="row">
             <div id="chart1" style="width:100%; height:400px;"></div>
         </div>
+
+        <hr>
+
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-6">
-                <div id="chart2" style="width:100%; height:400px;"></div>
-            </div>
+            <div id="chart2" style="width:100%; height:400px;"></div>
         </div>
     </div>
 
@@ -44,7 +45,11 @@
 
 <script>
 
-var url = '{{url("IndicadoresProduccion/HOral/SellantesData")}}';
+var y2018 = 2018;
+var url = '{{url("IndicadoresProduccion/HOral/SellantesData/")}}';
+
+var url2018 = `${url}/${y2018}`;
+
 const meses = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
 
 //===============================================================//
@@ -54,7 +59,7 @@ const meses = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV'
 //===============================================================//
 
 let dataArray1 = [];
-    fetch(url)
+    fetch(url2018)
         .then(response => response.json())
         .then(data => {
             let datos = data.datos;
@@ -90,6 +95,9 @@ let dataArray1 = [];
         title: {
             text: null
         },
+        labels: {
+            enabled: false
+        },
         gridLineWidth: 1,
         gridLineColor: '#FCFCFC'
     };
@@ -104,7 +112,7 @@ let dataArray1 = [];
     };
     var series = [
         {
-            name: '2017',
+            name: '2018',
             data: dataArray1
         }
     ];
@@ -115,7 +123,7 @@ let dataArray1 = [];
     chart1.xAxis = xAxis;
     chart1.plotOptions = plotOptions;
     chart1.yAxis = yAxis;
-    chart1.legend = legend;
+    chart1.legend = legend; 
     chart1.series = series;
     chart1.credits = credits;
 
@@ -125,18 +133,27 @@ let dataArray1 = [];
 //
 //===============================================================//
 
-    let dataArray = [];
-    fetch(url)
+    var urlYear = '{{url("IndicadoresProduccion/HOral/SellantesYear")}}';
+    let data2018 = [];
+    let data2017 = [];
+    fetch(urlYear)
         .then(response => response.json())
         .then(data => {
             let datos = data.datos;
-            datos.map( dat => {
-                dataArray.push(dat.data);
-            })
+            let res_2018 = datos.filter((data) => data.YEAR_ATENTION === 2018);
+            let res_2017 = datos.filter((data) =>  data.YEAR_ATENTION === 2017);
+            res_2018.map( dat => { data2018.push(dat.CANTIDAD) })
+            res_2017.map( dat => { data2017.push(dat.CANTIDAD) })
+            console.log(data2018);
+
             $('#chart2').highcharts(json);
         })
+    
+    var chart = {
+        type: 'column'
+    };
     var title = {
-        text: 'Número de sellantes aplicados'
+        text: 'Histórico de Número de sellantes aplicados'
     };
     var xAxis = {
         categories: meses
@@ -144,6 +161,9 @@ let dataArray1 = [];
     var yAxis = {
         title: {
             text: null
+        },
+        labels: {
+            enabled: false
         },
     };
     var credits = {
@@ -162,20 +182,22 @@ let dataArray1 = [];
     };
     var series = [
         {
-            name: '2018',
-            data: [1,2,3,2,3,2,2,2,1,23,11]
+            name: '2017',
+            data: data2017
         },
         {
-            name: '2017',
-            data: dataArray
+            name: '2018',
+            data: data2018,
+            color: '#1864AB'
         }
     ];
 
     var json = {};
+    json.chart = chart;
     json.title = title;
     json.xAxis = xAxis;
     json.yAxis = yAxis;
-    json.plotOptions = plotOptions;
+    //json.plotOptions = plotOptions;
     json.legend = legend;
     json.series = series;
     json.credits = credits;

@@ -14,7 +14,8 @@ Route::get('/IndicadoresProduccion/PYP','IndicadoresPController@index_pyp')->nam
     // Sellants
 
     Route::get('/IndicadoresProduccion/HOral/Sellantes','HOralController@sellantes')->name('Sellantes');
-    Route::get('/IndicadoresProduccion/HOral/SellantesData','HOralController@sellantes_data');
+    Route::get('/IndicadoresProduccion/HOral/SellantesData/{year}','HOralController@sellantes_data');
+    Route::get('/IndicadoresProduccion/HOral/SellantesYear','HOralController@sellantes_year');
 
     // Control de Placa
 

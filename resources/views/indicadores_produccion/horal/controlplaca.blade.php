@@ -4,12 +4,8 @@
 
 @section('content')
 
-    <div class="container-fluid mt-4">
-        <div class="jumbotron">
-            <h1 class="display-4">Indicadores de Producción</h1>
-            <p class="lead">Indicadores de Higiene Oral. Control de Placa</p>
-            <hr>
-        </div>
+    <div class="container">
+        <example-component></example-component>
     </div>
 
     <div class="container">

@@ -14,9 +14,15 @@ class HOralController extends Controller
         return view('indicadores_produccion.horal.sellantes');
     }
 
-    public function sellantes_data(){
+    public function sellantes_data($year){
 
-        $datos = DB::select("SELECT MES_ATENCION AS name, CANTIDAD AS data FROM dbo.FUC_PLACA_08('20170101','20171231') ORDER BY MES_ATENCION ASC");
+        $datos = DB::select("SELECT CANTIDAD AS data FROM dbo.FUC_SELLANTES_08('$year') ORDER BY MES_ATENCION ASC");
+        return response()->json(['datos' => $datos])->setEncodingOptions(JSON_NUMERIC_CHECK);
+    }
+
+    public function sellantes_year(){
+        
+        $datos = DB::select("SELECT YEAR_ATENTION, MES_ATENCION, CANTIDAD FROM dbo.FUC_SELLANTES_09()");
         return response()->json(['datos' => $datos])->setEncodingOptions(JSON_NUMERIC_CHECK);
     }
 
