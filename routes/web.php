@@ -13,13 +13,13 @@ Route::get('/IndicadoresProduccion/PYP','IndicadoresPController@index_pyp')->nam
 
     // Sellants
 
-    Route::get('/IndicadoresProduccion/HOral/Sellantes','HOralController@sellantes')->name('Sellantes');
+    Route::get('/IndicadoresProduccion/Sellantes','HOralController@sellantes')->name('Sellantes');
     Route::get('/IndicadoresProduccion/HOral/SellantesData/{year}','HOralController@sellantes_data');
     Route::get('/IndicadoresProduccion/HOral/SellantesYear','HOralController@sellantes_year');
 
     // Control de Placa
 
-    Route::get('/IndicadoresProduccion/HOral/ControlPlaca','HOralController@control_placa')->name('ControlPlaca');
+    Route::get('/IndicadoresProduccion/ControlPlaca','HOralController@control_placa')->name('ControlPlaca');
     Route::get('/IndicadoresProduccion/HOral/ControlPlacaData','HOralController@control_placa_data');
 
     // Flúor Tópico

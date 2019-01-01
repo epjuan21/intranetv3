@@ -2,62 +2,29 @@
 
 @section('title','Indicadores Producción')
 
+@section('breadcrumb')
+    <nav>
+        <ol class="j-bread">
+            <li class="j-bread-item"><a href="{{ url('/') }}">Inicio</a></li>
+            <li class="j-bread-item"><a href="{{ route('IndicadoresProduccion') }}">Indicadores Producción</a></li>
+            <li class="j-bread-item"><a href="{{ route('HomePYP') }}">Promoción y Prevención</a></li>
+            <li class="j-bread-item active">Control de Placa</li>
+        </ol>
+    </nav>
+@endsection
+
 @section('content')
 
     <div class="container">
-        <example-component></example-component>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1>Pruebas</h1>
-            
-            </div>
+        <div class="j-h1">
+            <div class="j-h1-w">
+                <div class="j-h1-n">02</div>
+                <h1>Higiene Oral - Control de Placa</h1>
             </div>
         </div>
     </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-6">
-                <div id="container" style="width:100%; height:400px;"></div>
-            </div>
-        </div>
-    </div>
+    <control-placa></control-placa>
 
-@endsection
-
-@section('scripts_graficos')
-
-<script>
-const url = '{{url("IndicadoresProduccion/HOral/ControlPlacaData")}}';
-let dataArray = [];
-let categoryArray = [];
-fetch(url)
-    .then(response => response.json())
-    .then(data =>  {
-        data.map(dat => {
-            dataArray.push(parseInt(dat.CANTIDAD));
-            categoryArray.push(dat.MES_ATENCION);
-        })
-        var chart = new Highcharts.Chart(options);
-    });
-
-    var options = {
-    chart: {
-        renderTo: 'container',
-        type: 'bar'
-    },
-    xAxis:  {
-        categories: categoryArray
-    },
-    series: [{
-        name: '2018',
-        data: dataArray
-    }]
-};
-   
- </script>
 
 @endsection

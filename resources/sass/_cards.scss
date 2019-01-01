@@ -194,3 +194,42 @@
     color: white;
 }
 
+// Cards - Graphic Card 1
+
+.j-graphic-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.j-graphic-card {
+    border: 1px solid $gray3;
+    display: flex;
+    flex-direction: column;
+}
+
+.j-graphic-head {
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px solid $gray3;
+    width: 100%;
+    padding: 10px;
+}
+
+.j-select-container {
+    display: flex;
+}
+
+.j-select-container .form-control {
+    margin-left: 5px;
+}
+
+.j-graphic-body {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+}

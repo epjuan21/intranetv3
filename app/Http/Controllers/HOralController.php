@@ -35,7 +35,7 @@ class HOralController extends Controller
 
     public function control_placa_data(){
 
-        $datos = DB::select("SELECT CANTIDAD, MES_ATENCION FROM dbo.FUC_PLACA_08('20170101','20171231') ORDER BY MES_ATENCION ASC");
+        $datos = DB::select("SELECT YEAR_ATENTION, MES_ATENCION, CANTIDAD FROM dbo.FUC_PLACA_09() ORDER BY YEAR_ATENTION");
         return response()->json($datos);
     }
 

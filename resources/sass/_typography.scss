@@ -45,7 +45,7 @@
 
 .j-h1 h1{
     font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: $fontFamilyPrimary;
     font-weight: 400; 
     color: #495057;
     margin: 0px;
@@ -57,4 +57,12 @@
     padding-bottom: 1.5rem;
     border-bottom: 1px solid $gray3;
     margin: 1.5rem 0 1.5rem 0;
+}
+
+// Higcharts Titles
+
+.highcharts-title {
+    font-family: $fontFamilyPrimary;
+    font-weight: 400; 
+    color: #495057;
 }
