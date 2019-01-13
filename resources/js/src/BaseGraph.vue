@@ -22,6 +22,7 @@
 
 <script>
 
+import Highcharts from 'highcharts'
 import { mapState } from 'vuex'
 import selectYear from './SelectYear.vue'
 import Spinner from './Spinner.vue'
@@ -44,11 +45,9 @@ export default {
     },
 
     computed: {
-        ...mapState({
-            filter: state => state.filter,
-            list: state => state.list,
-            title: state => state.title
-        }),
+        
+        ...mapState(['filter','list','title']),
+
         getCurrentYear(){
             const currentDate = new Date();
             return this.currentYear = currentDate.getFullYear();
@@ -86,6 +85,7 @@ export default {
             }
 
             const values = list.map(item => parseInt(item.CANTIDAD))
+            const categories = list.map(item => item.MES_ATENCION.substr(3,3))
 
             if (this.currentYear !== '' && this.filter == '') {
                 this.seriesName = this.currentYear
@@ -93,11 +93,11 @@ export default {
                 this.seriesName = this.filter
             }
 
-            this.buildGraphic(values)
+            this.buildGraphic(values, categories)
             this.loading = false
         },  
         
-        buildGraphic(values) {
+        buildGraphic(values, categories) {
             Highcharts.chart('graphic', {
                 chart: {
                     type: 'column'
@@ -112,7 +112,7 @@ export default {
                     text: null
                 },
                 xAxis: {
-                    categories: [ 'ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC']
+                    categories: categories
                 },
                 yAxis: {
                     title: {

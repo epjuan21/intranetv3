@@ -19,15 +19,7 @@ export default {
 
     extends: BaseGraph,
 
-    components: {
-        BaseGraph
-    },
-
-    data() {
-        return {
-            name: 'Control Placa',
-        }
-    },
+    components: { BaseGraph },
 
     beforeMount(){
         this.$store.commit('SET_TITLE','Número de Controles de Placa')

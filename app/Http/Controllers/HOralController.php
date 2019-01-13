@@ -14,15 +14,9 @@ class HOralController extends Controller
         return view('indicadores_produccion.horal.sellantes');
     }
 
-    public function sellantes_data($year){
+    public function sellantes_data(){
 
-        $datos = DB::select("SELECT CANTIDAD AS data FROM dbo.FUC_SELLANTES_08('$year') ORDER BY MES_ATENCION ASC");
-        return response()->json(['datos' => $datos])->setEncodingOptions(JSON_NUMERIC_CHECK);
-    }
-
-    public function sellantes_year(){
-        
-        $datos = DB::select("SELECT YEAR_ATENTION, MES_ATENCION, CANTIDAD FROM dbo.FUC_SELLANTES_09()");
+        $datos = DB::select("SELECT YEAR_ATENTION, MES_ATENCION, CANTIDAD FROM dbo.FUC_SELLANTES_09() ORDER BY YEAR_ATENTION, MES_ATENCION");
         return response()->json(['datos' => $datos])->setEncodingOptions(JSON_NUMERIC_CHECK);
     }
 
@@ -35,7 +29,7 @@ class HOralController extends Controller
 
     public function control_placa_data(){
 
-        $datos = DB::select("SELECT YEAR_ATENTION, MES_ATENCION, CANTIDAD FROM dbo.FUC_PLACA_09() ORDER BY YEAR_ATENTION");
+        $datos = DB::select("SELECT YEAR_ATENTION, MES_ATENCION, CANTIDAD FROM dbo.FUC_PLACA_09() ORDER BY YEAR_ATENTION, MES_ATENCION");
         return response()->json($datos);
     }
 
@@ -47,12 +41,18 @@ class HOralController extends Controller
 
     public function fluor_topico_data(){
         
-        $datos = DB::select("SELECT *FROM dbo.FUC_PLACA_08('20170101','20171231') ORDER BY MES_ATENCION ASC");
-
-        return response()->json(['datos' => $datos])->setEncodingOptions(JSON_NUMERIC_CHECK);
+        $datos = DB::select("SELECT YEAR_ATENTION, MES_ATENCION, CANTIDAD FROM dbo.FUC_TOP_01() ORDER BY YEAR_ATENTION, MES_ATENCION");
+        return response()->json($datos);
     }
+
+    // Barniz Fluor
 
     public function barniz_fluor(){
         return view('indicadores_produccion.horal.barnizfluor');
+    }
+
+    public function barniz_fluor_data(){
+        $datos = DB::select("SELECT YEAR_ATENTION, MES_ATENCION, CANTIDAD FROM dbo.FUC_BARNIZ_10() ORDER BY YEAR_ATENTION, MES_ATENCION");
+        return response()->json($datos);
     }
 }

@@ -33,7 +33,6 @@
 
         {{-- Scripts --}}
         <script src="{{ asset('js/app.js') }}"></script>
-        <script src="https://code.highcharts.com/highcharts.js"></script>
         @yield('scripts_graficos')
     </body>
 </html>

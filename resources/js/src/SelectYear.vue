@@ -1,7 +1,7 @@
 <template>
 
     <div>
-        <select class="form-control form-control-sm" v-on:change.prevent.stop="commit" v-model.number="year">
+        <select class="form-control form-control-sm" v-on:change.prevent="commit" v-model.number="year">
             <option disabled value="">Año...</option>
             <option v-for="year in listOfYears" v-bind:value="year" :key="year">{{ year }}</option>
         </select>

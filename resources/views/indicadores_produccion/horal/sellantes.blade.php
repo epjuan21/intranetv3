@@ -24,6 +24,6 @@
         </div>
     </div>
 
-    <graph-one></graph-one>
+    <sellantes></sellantes>
 
 @endsection

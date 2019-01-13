@@ -1,0 +1,40 @@
+<template>
+
+    <div>
+
+        <base-graph></base-graph>
+
+    </div>
+    
+</template>
+
+<script>
+
+import { mapState, mapMutations } from 'vuex'
+import BaseGraph from "../../BaseGraph.vue"
+
+export default {
+    
+    name: 'control-prenatal-ingreso',
+
+    extends: BaseGraph,
+
+    components: { BaseGraph },
+
+    methods: {
+        ...mapMutations(['SET_LIST','SET_LIST_OF_YEARS'])
+    },
+
+    beforeMount(){
+        this.$store.commit('SET_TITLE','Ingreso a Control Prenatal Por Médico')
+    },
+
+    created() {
+        axios.get('/IndicadoresProduccion/IngresoControlPrenatalData')
+        .then(response => {
+            this.SET_LIST(response.data)
+            this.SET_LIST_OF_YEARS(this.getYears)
+        })   
+    },    
+}
+</script>

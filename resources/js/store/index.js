@@ -8,9 +8,7 @@ export default new Vuex.Store({
         list: [],
         filter: '',
         listOfYears: [],
-        count: 0,
         title: ''
-
     },
     mutations: {
         SET_LIST(state, obj) {
@@ -24,9 +22,6 @@ export default new Vuex.Store({
         },
         SET_TITLE(state, obj){
             state.title = obj
-        },
-        increment (state){
-            state.count++
         }
     }
 })
