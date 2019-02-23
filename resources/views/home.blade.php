@@ -28,7 +28,7 @@
             <div class="j-c1-b-c">
                 <div class="j-c1-body">
                 <div class="j-c1-b-title">Indicadores</div>
-                <div class="j-c1-b-subtitle">Producción </div>
+                <div class="j-c1-b-subtitle">Producción</div>
                 </div>
             </div>
             

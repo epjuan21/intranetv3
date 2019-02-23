@@ -14,8 +14,16 @@
   color: #51CF66;
 }
 
+.bc-cex {
+  border-color: #51CF66;
+}
+
 .tc-urg {
   color: #c92a2a;
+}
+
+.bc-urg {
+  border-color: #c92a2a;
 }
 
 .tc-odo {
@@ -28,6 +36,10 @@
 
 .tc-rx {
   color: #495057;
+}
+
+.bc-rx {
+  border-color: #495057;
 }
 
 .tc-lab {

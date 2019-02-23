@@ -38,7 +38,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">01</div>
+            <div class="j-c3-number">01</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -60,7 +60,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">02</div>
+            <div class="j-c3-number">02</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -82,7 +82,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">03</div>
+            <div class="j-c3-number">03</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -104,7 +104,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">04</div>
+            <div class="j-c3-number">04</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -136,7 +136,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">05</div>
+            <div class="j-c3-number">05</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -168,7 +168,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">06</div>
+            <div class="j-c3-number">06</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -200,7 +200,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">07</div>
+            <div class="j-c3-number">07</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -234,7 +234,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">08</div>
+            <div class="j-c3-number">08</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -256,7 +256,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">09</div>
+            <div class="j-c3-number">09</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -272,8 +272,6 @@
         </div>
 
     </div>
-
-
 
 </div>
 
@@ -292,7 +290,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">10</div>
+            <div class="j-c3-number">10</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -326,7 +324,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">11</div>
+            <div class="j-c3-number">11</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -348,7 +346,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">12</div>
+            <div class="j-c3-number">12</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -382,7 +380,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">13</div>
+            <div class="j-c3-number">13</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -416,7 +414,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">14</div>
+            <div class="j-c3-number">14</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -438,7 +436,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">15</div>
+            <div class="j-c3-number">15</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -472,7 +470,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">16</div>
+            <div class="j-c3-number">16</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -506,7 +504,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">17</div>
+            <div class="j-c3-number">17</div>
         </div>
 
         <div class="j-c3-b-c">
@@ -540,7 +538,7 @@
     <div class="j-c3">
 
         <div class="j-c3-i-c bc-pyp">
-            <div class="j-c3-number color-pyp">18</div>
+            <div class="j-c3-number">18</div>
         </div>
 
         <div class="j-c3-b-c">

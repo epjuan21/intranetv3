@@ -17,10 +17,10 @@ export default new Vuex.Store({
         SET_FILTER(state, obj) {
             state.filter = obj
         },
-        SET_LIST_OF_YEARS(state, obj){
+        SET_LIST_OF_YEARS(state, obj) {
             state.listOfYears = obj
         },
-        SET_TITLE(state, obj){
+        SET_TITLE(state, obj) {
             state.title = obj
         }
     }

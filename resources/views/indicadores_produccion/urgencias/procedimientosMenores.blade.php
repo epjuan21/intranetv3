@@ -7,8 +7,8 @@
         <ol class="j-bread">
             <li class="j-bread-item"><a href="{{ url('/') }}">Inicio</a></li>
             <li class="j-bread-item"><a href="{{ route('IndicadoresProduccion') }}">Indicadores Producción</a></li>
-            <li class="j-bread-item"><a href="{{ route('HomePYP') }}">Promoción y Prevención</a></li>
-            <li class="j-bread-item active">Ingresos Crecimiento y Desarrollo</li>
+            <li class="j-bread-item"><a href="{{ route('UrgenciasHome') }}">Urgencias</a></li>
+            <li class="j-bread-item active">Procedimientos Menores</li>
         </ol>
     </nav>
 @endsection
@@ -18,12 +18,12 @@
    <div class="container">
       <div class="j-h1">
          <div class="j-h1-w">
-            <div class="j-h1-n">11</div>
-            <h1>Ingresos Crecimiento y Desarrollo</h1>
+            <div class="j-h1-n">03</div>
+            <h1>Procedimientos Menores</h1>
          </div>
       </div>
    </div>
 
-   <ingresos-cyd></ingresos-cyd>
+   <procedimientos-menores></procedimientos-menores>
 
 @endsection

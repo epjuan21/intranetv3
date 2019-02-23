@@ -21,6 +21,13 @@ Vue.component('ControlPrenatalConsulta', require('./src/graphics/ControlPrenatal
 Vue.component('ConsultaAdulto', require('./src/graphics/Adulto/Adulto.vue'));
 Vue.component('Citologia', require('./src/graphics/Citologia/Citologia.vue'));
 Vue.component('AgudezaVisual', require('./src/graphics/AgudezaVisual/AgudezaVisual.vue'));
+Vue.component('MedicinaGeneralElectiva', require('./src/graphics/MedicinaGeneral/MedicinaGeneralElectiva.vue'));
+Vue.component('MedicinaGeneralPrimeraVez', require('./src/graphics/MedicinaGeneral/MedicinaGeneralPrimeraVez.vue'));
+Vue.component('ConsultaUrgencias', require('./src/graphics/Urgencias/ConsultaUrgencias.vue'));
+Vue.component('Triaje2', require('./src/graphics/Urgencias/Triaje2.vue'));
+Vue.component('ProcedimientosMenores', require('./src/graphics/Urgencias/ProcedimientosMenores.vue'));
+Vue.component('PacientesObservacion', require('./src/graphics/Urgencias/PacientesObservacion.vue'));
+
 
 import store from './store'
 

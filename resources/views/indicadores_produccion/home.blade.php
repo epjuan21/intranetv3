@@ -58,13 +58,13 @@
             
             <div class="j-c2-b-c">
               <div class="j-c2-b-title">
-                Consulta Externa
+                Medicina General
               </div>  
             </div>
             
             <div class="j-c2-l-c">
               <div class="j-c2-link">
-                <a href="">
+                <a href="{{ route('MedicinaGeneralHome') }}">
                   <i class="fas fa-ellipsis-v"></i>
                   <i class="fas fa-circle"></i>
                 </a>
@@ -88,7 +88,7 @@
             
             <div class="j-c2-l-c">
                 <div class="j-c2-link">
-                <a href="">
+                <a href="{{ route('UrgenciasHome') }}">
                     <i class="fas fa-ellipsis-v"></i>
                     <i class="fas fa-circle"></i>
                 </a>
@@ -160,7 +160,7 @@
             
             <div class="j-c2-l-c">
                 <div class="j-c2-link">
-                <a href="">
+                <a href="{{ route('RayosXHome') }}">
                     <i class="fas fa-ellipsis-v"></i>
                     <i class="fas fa-circle"></i>
                 </a>

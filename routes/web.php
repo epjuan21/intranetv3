@@ -2,11 +2,64 @@
 
 Route::get('/', 'HomeController@home');
 
-// Rutas Indicadores de Producción
+    // Rutas Indicadores de Producción
 
     Route::get('/IndicadoresProduccion','IndicadoresPController@index')->name('IndicadoresProduccion');
 
     Route::get('/IndicadoresProduccion/PYP','IndicadoresPController@index_pyp')->name('HomePYP');
+
+    // Rutas Consulta de Medicina General
+
+    Route::get('/IndicadoresProduccion/MedicinaGeneral','IndicadoresPController@index_mg')->name('MedicinaGeneralHome');
+    
+    // Rutas Urgencias
+
+    Route::get('/IndicadoresProduccion/Urgencias','IndicadoresPController@index_urg')->name('UrgenciasHome');
+
+    // Rutas RayosX
+
+    Route::get('/IndicadoresProduccion/RayosX','IndicadoresPController@index_rayosx')->name('RayosXHome');
+
+    // Medicina General
+
+        // Medicina General Electiva
+        
+        Route::get('/IndicadoresProduccion/MedicinaGeneralElectiva','MedicinaGeneralController@med_gen_elect')->name('MedicinaGeneralElectiva');
+        Route::get('/IndicadoresProduccion/MedicinaGeneralElectivaData','MedicinaGeneralController@med_gen_elect_data');
+
+        // Medicina General De Primera Vez
+
+        Route::get('/IndicadoresProduccion/MedicinaGeneralPrimeraVez','MedicinaGeneralController@med_gen_pri')->name('MedicinaGeneralPrimeraVez');
+        Route::get('/IndicadoresProduccion/MedicinaGeneralPrimeraVezData','MedicinaGeneralController@med_gen_pri_data');
+
+    // Urgencias
+
+        // Número de Consulta de Medicina General en Urgencias
+
+        Route::get('/IndicadoresProduccion/ConsultasUrgencias','UrgenciasController@consultas_urgencias')->name('ConsultasUrgencias');
+        Route::get('/IndicadoresProduccion/ConsultasUrgenciasData','UrgenciasController@consultas_urgencias_data');
+
+        // Número total de pacientes clasificados como Triage 2
+
+        Route::get('/IndicadoresProduccion/Triaje2','UrgenciasController@triaje2')->name('Triaje2');
+        Route::get('/IndicadoresProduccion/Triaje2Data','UrgenciasController@triaje2_data');
+
+        // Número total de procedimientos menores por médico
+
+        Route::get('/IndicadoresProduccion/ProcedimientosMenores','UrgenciasController@procedimientos_menores')->name('ProcedimientosMenores');
+        Route::get('/IndicadoresProduccion/ProcedimientosMenoresData','UrgenciasController@procedimientos_menores_data');
+
+        // Pacientes en Observación
+
+        Route::get('/IndicadoresProduccion/PacientesObservacion','UrgenciasController@pacientes_observacion')->name('PacientesObservacion');
+        Route::get('/IndicadoresProduccion/PacientesObservacionData','UrgenciasController@pacientes_observacion_data');
+
+    // Rayos X
+
+        // Número de imágenes diagnósticas tomadas
+
+        Route::get('/IndicadoresProduccion/ImagenesDiagnosticas','RayosXController@rayos_x')->name('ImagenesDiagnosticas');
+        Route::get('/IndicadoresProduccion/ImagenesDiagnosticasData','RayosXController@rayos_x_data');
 
     // Higiene Oral
 

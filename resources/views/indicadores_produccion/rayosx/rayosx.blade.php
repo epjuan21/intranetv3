@@ -7,23 +7,24 @@
         <ol class="j-bread">
             <li class="j-bread-item"><a href="{{ url('/') }}">Inicio</a></li>
             <li class="j-bread-item"><a href="{{ route('IndicadoresProduccion') }}">Indicadores Producción</a></li>
-            <li class="j-bread-item"><a href="{{ route('HomePYP') }}">Promoción y Prevención</a></li>
-            <li class="j-bread-item active">Ingresos Crecimiento y Desarrollo</li>
+            <li class="j-bread-item"><a href="{{ route('RayosXHome') }}">Rayos X</a></li>
+            <li class="j-bread-item active">Número de imágenes diagnósticas tomadas</li>
         </ol>
     </nav>
 @endsection
+
 
 @section('content')
 
    <div class="container">
       <div class="j-h1">
          <div class="j-h1-w">
-            <div class="j-h1-n">11</div>
-            <h1>Ingresos Crecimiento y Desarrollo</h1>
+            <div class="j-h1-n">01</div>
+            <h1>Número de imágenes diagnósticas tomadas</h1>
          </div>
       </div>
    </div>
 
-   <ingresos-cyd></ingresos-cyd>
+   
 
 @endsection

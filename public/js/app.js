@@ -26546,7 +26546,7 @@ this.currentResponsive=void 0)};C.prototype.matchResponsiveRule=function(a,f){va
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(17);
-module.exports = __webpack_require__(96);
+module.exports = __webpack_require__(129);
 
 
 /***/ }),
@@ -26555,7 +26555,7 @@ module.exports = __webpack_require__(96);
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__store__ = __webpack_require__(128);
 __webpack_require__(18);
 
 window.Vue = __webpack_require__(14);
@@ -26574,11 +26574,17 @@ Vue.component('Diu', __webpack_require__(83));
 Vue.component('IngresosCyd', __webpack_require__(86));
 Vue.component('ControlesCyd', __webpack_require__(89));
 Vue.component('Joven', __webpack_require__(92));
-Vue.component('ControlPrenatalIngreso', __webpack_require__(100));
-Vue.component('ControlPrenatalConsulta', __webpack_require__(103));
-Vue.component('ConsultaAdulto', __webpack_require__(106));
-Vue.component('Citologia', __webpack_require__(109));
-Vue.component('AgudezaVisual', __webpack_require__(112));
+Vue.component('ControlPrenatalIngreso', __webpack_require__(95));
+Vue.component('ControlPrenatalConsulta', __webpack_require__(98));
+Vue.component('ConsultaAdulto', __webpack_require__(101));
+Vue.component('Citologia', __webpack_require__(104));
+Vue.component('AgudezaVisual', __webpack_require__(107));
+Vue.component('MedicinaGeneralElectiva', __webpack_require__(110));
+Vue.component('MedicinaGeneralPrimeraVez', __webpack_require__(113));
+Vue.component('ConsultaUrgencias', __webpack_require__(116));
+Vue.component('Triaje2', __webpack_require__(119));
+Vue.component('ProcedimientosMenores', __webpack_require__(122));
+Vue.component('PacientesObservacion', __webpack_require__(125));
 
 
 
@@ -49529,29 +49535,23 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-    data: function data() {
-        return {
-            year: ''
-        };
-    },
+  data: function data() {
+    return {
+      year: ""
+    };
+  },
 
 
-    computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapState */])({
-        listOfYears: function listOfYears(state) {
-            return state.listOfYears;
-        }
-    })),
+  computed: _extends({}, Object(__WEBPACK_IMPORTED_MODULE_0_vuex__["c" /* mapState */])(["listOfYears"])),
 
-    methods: {
-        commit: function commit() {
-            this.$store.commit('SET_FILTER', this.year);
-        }
+  methods: {
+    commit: function commit() {
+      this.$store.commit("SET_FILTER", this.year);
     }
+  }
 });
 
 /***/ }),
@@ -49591,10 +49591,7 @@ var render = function() {
                 ? $$selectedVal
                 : $$selectedVal[0]
             },
-            function($event) {
-              $event.preventDefault()
-              return _vm.commit($event)
-            }
+            _vm.commit
           ]
         }
       },
@@ -51555,59 +51552,14 @@ if (false) {
 
 /***/ }),
 /* 95 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(1);
-
-
-
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
-
-/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
-    state: {
-        list: [],
-        filter: '',
-        listOfYears: [],
-        title: ''
-    },
-    mutations: {
-        SET_LIST: function SET_LIST(state, obj) {
-            state.list = obj;
-        },
-        SET_FILTER: function SET_FILTER(state, obj) {
-            state.filter = obj;
-        },
-        SET_LIST_OF_YEARS: function SET_LIST_OF_YEARS(state, obj) {
-            state.listOfYears = obj;
-        },
-        SET_TITLE: function SET_TITLE(state, obj) {
-            state.title = obj;
-        }
-    }
-}));
-
-/***/ }),
-/* 96 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 97 */,
-/* 98 */,
-/* 99 */,
-/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(101)
+var __vue_script__ = __webpack_require__(96)
 /* template */
-var __vue_template__ = __webpack_require__(102)
+var __vue_template__ = __webpack_require__(97)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -51646,7 +51598,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 101 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51695,7 +51647,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 });
 
 /***/ }),
-/* 102 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -51715,15 +51667,15 @@ if (false) {
 }
 
 /***/ }),
-/* 103 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(104)
+var __vue_script__ = __webpack_require__(99)
 /* template */
-var __vue_template__ = __webpack_require__(105)
+var __vue_template__ = __webpack_require__(100)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -51762,7 +51714,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 104 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51811,7 +51763,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 });
 
 /***/ }),
-/* 105 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -51831,15 +51783,15 @@ if (false) {
 }
 
 /***/ }),
-/* 106 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(107)
+var __vue_script__ = __webpack_require__(102)
 /* template */
-var __vue_template__ = __webpack_require__(108)
+var __vue_template__ = __webpack_require__(103)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -51878,7 +51830,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 107 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51927,7 +51879,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 });
 
 /***/ }),
-/* 108 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -51947,15 +51899,15 @@ if (false) {
 }
 
 /***/ }),
-/* 109 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(110)
+var __vue_script__ = __webpack_require__(105)
 /* template */
-var __vue_template__ = __webpack_require__(111)
+var __vue_template__ = __webpack_require__(106)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -51994,7 +51946,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 110 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52043,7 +51995,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 });
 
 /***/ }),
-/* 111 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -52063,15 +52015,15 @@ if (false) {
 }
 
 /***/ }),
-/* 112 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
 var normalizeComponent = __webpack_require__(0)
 /* script */
-var __vue_script__ = __webpack_require__(113)
+var __vue_script__ = __webpack_require__(108)
 /* template */
-var __vue_template__ = __webpack_require__(114)
+var __vue_template__ = __webpack_require__(109)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
@@ -52110,7 +52062,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 113 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52159,7 +52111,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 });
 
 /***/ }),
-/* 114 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var render = function() {
@@ -52177,6 +52129,714 @@ if (false) {
     require("vue-hot-reload-api")      .rerender("data-v-21098124", module.exports)
   }
 }
+
+/***/ }),
+/* 110 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(111)
+/* template */
+var __vue_template__ = __webpack_require__(112)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/src/graphics/MedicinaGeneral/MedicinaGeneralElectiva.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-2f6f799f", Component.options)
+  } else {
+    hotAPI.reload("data-v-2f6f799f", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 111 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+
+    name: 'medicina-general-electiva',
+
+    extends: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a,
+
+    components: { BaseGraph: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a },
+
+    beforeMount: function beforeMount() {
+        this.$store.commit('SET_TITLE', 'Consultas de Medicina General Electiva');
+    },
+    created: function created() {
+        var _this = this;
+
+        axios.get('/IndicadoresProduccion/MedicinaGeneralElectivaData').then(function (response) {
+            _this.$store.commit('SET_LIST', response.data);
+            _this.$store.commit('SET_LIST_OF_YEARS', _this.getYears);
+        });
+    }
+});
+
+/***/ }),
+/* 112 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_c("base-graph")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-2f6f799f", module.exports)
+  }
+}
+
+/***/ }),
+/* 113 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(114)
+/* template */
+var __vue_template__ = __webpack_require__(115)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/src/graphics/MedicinaGeneral/MedicinaGeneralPrimeraVez.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-751227d2", Component.options)
+  } else {
+    hotAPI.reload("data-v-751227d2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 114 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__);
+//
+//
+//
+//
+//
+//
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "medicina-general-primera-vez",
+
+  extends: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a,
+
+  components: { BaseGraph: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a },
+
+  beforeMount: function beforeMount() {
+    this.$store.commit("SET_TITLE", "Consultas de Medicina General de Primera Vez");
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get("/IndicadoresProduccion/MedicinaGeneralPrimeraVezData").then(function (response) {
+      _this.$store.commit("SET_LIST", response.data);
+      _this.$store.commit("SET_LIST_OF_YEARS", _this.getYears);
+    });
+  }
+});
+
+/***/ }),
+/* 115 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_c("base-graph")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-751227d2", module.exports)
+  }
+}
+
+/***/ }),
+/* 116 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(117)
+/* template */
+var __vue_template__ = __webpack_require__(118)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/src/graphics/Urgencias/ConsultaUrgencias.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4db84752", Component.options)
+  } else {
+    hotAPI.reload("data-v-4db84752", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 117 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+
+    name: 'consulta-urgencias',
+
+    extends: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a,
+
+    components: { BaseGraph: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a },
+
+    beforeMount: function beforeMount() {
+        this.$store.commit('SET_TITLE', 'Consulta de Medicina General en Urgencias');
+    },
+    created: function created() {
+        var _this = this;
+
+        axios.get('/IndicadoresProduccion/ConsultasUrgenciasData').then(function (response) {
+            _this.$store.commit('SET_LIST', response.data);
+            _this.$store.commit('SET_LIST_OF_YEARS', _this.getYears);
+        });
+    }
+});
+
+/***/ }),
+/* 118 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_c("base-graph")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-4db84752", module.exports)
+  }
+}
+
+/***/ }),
+/* 119 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(120)
+/* template */
+var __vue_template__ = __webpack_require__(121)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/src/graphics/Urgencias/Triaje2.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-790435e2", Component.options)
+  } else {
+    hotAPI.reload("data-v-790435e2", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 120 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+
+    name: 'triaje-2',
+
+    extends: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a,
+
+    components: { BaseGraph: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a },
+
+    beforeMount: function beforeMount() {
+        this.$store.commit('SET_TITLE', 'Pacientes Clasificados como Triage 2');
+    },
+    created: function created() {
+        var _this = this;
+
+        axios.get('/IndicadoresProduccion/Triaje2Data').then(function (response) {
+            _this.$store.commit('SET_LIST', response.data);
+            _this.$store.commit('SET_LIST_OF_YEARS', _this.getYears);
+        });
+    }
+});
+
+/***/ }),
+/* 121 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_c("base-graph")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-790435e2", module.exports)
+  }
+}
+
+/***/ }),
+/* 122 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(123)
+/* template */
+var __vue_template__ = __webpack_require__(124)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/src/graphics/Urgencias/ProcedimientosMenores.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-c188522e", Component.options)
+  } else {
+    hotAPI.reload("data-v-c188522e", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 123 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+
+    name: 'procedimientos-menores',
+
+    extends: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a,
+
+    components: { BaseGraph: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a },
+
+    beforeMount: function beforeMount() {
+        this.$store.commit('SET_TITLE', 'Número total de procedimientos menores por médico');
+    },
+    created: function created() {
+        var _this = this;
+
+        axios.get('/IndicadoresProduccion/ProcedimientosMenoresData').then(function (response) {
+            _this.$store.commit('SET_LIST', response.data);
+            _this.$store.commit('SET_LIST_OF_YEARS', _this.getYears);
+        });
+    }
+});
+
+/***/ }),
+/* 124 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_c("base-graph")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-c188522e", module.exports)
+  }
+}
+
+/***/ }),
+/* 125 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+var normalizeComponent = __webpack_require__(0)
+/* script */
+var __vue_script__ = __webpack_require__(126)
+/* template */
+var __vue_template__ = __webpack_require__(127)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = null
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/src/graphics/Urgencias/PacientesObservacion.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0be8b06c", Component.options)
+  } else {
+    hotAPI.reload("data-v-0be8b06c", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 126 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vuex__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+
+    name: 'pacientes-observacion',
+
+    extends: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a,
+
+    components: { BaseGraph: __WEBPACK_IMPORTED_MODULE_1__BaseGraph_vue___default.a },
+
+    beforeMount: function beforeMount() {
+        this.$store.commit('SET_TITLE', 'Pacientes en Observación');
+    },
+    created: function created() {
+        var _this = this;
+
+        axios.get('/IndicadoresProduccion/PacientesObservacionData').then(function (response) {
+            _this.$store.commit('SET_LIST', response.data);
+            _this.$store.commit('SET_LIST_OF_YEARS', _this.getYears);
+        });
+    }
+});
+
+/***/ }),
+/* 127 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [_c("base-graph")], 1)
+}
+var staticRenderFns = []
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-0be8b06c", module.exports)
+  }
+}
+
+/***/ }),
+/* 128 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(14);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vuex__ = __webpack_require__(1);
+
+
+
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */]);
+
+/* harmony default export */ __webpack_exports__["a"] = (new __WEBPACK_IMPORTED_MODULE_1_vuex__["a" /* default */].Store({
+    state: {
+        list: [],
+        filter: '',
+        listOfYears: [],
+        title: ''
+    },
+    mutations: {
+        SET_LIST: function SET_LIST(state, obj) {
+            state.list = obj;
+        },
+        SET_FILTER: function SET_FILTER(state, obj) {
+            state.filter = obj;
+        },
+        SET_LIST_OF_YEARS: function SET_LIST_OF_YEARS(state, obj) {
+            state.listOfYears = obj;
+        },
+        SET_TITLE: function SET_TITLE(state, obj) {
+            state.title = obj;
+        }
+    }
+}));
+
+/***/ }),
+/* 129 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
